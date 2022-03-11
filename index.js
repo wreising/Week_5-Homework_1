@@ -1,6 +1,8 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const gemerateMarkdown = require('generateMarkdown.js')
+const generateMarkdown = require('generateMarkdown.js')
+
+// title of your project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
 
 const promptUser = () => {
   return inquirer.prompt([
@@ -11,46 +13,107 @@ const promptUser = () => {
     },
     {
       type: 'input',
-      name: 'location',
-      message: 'Where are you from?',
+      name: 'title',
+      message: 'What is the title of your Project?',
     },
     {
       type: 'input',
-      name: 'hobby',
-      message: 'What is your favorite hobby?',
+      name: 'description',
+      message: 'Describe the Project:',
     },
     {
       type: 'input',
-      name: 'food',
-      message: 'What is your favorite food?',
+      name: 'installInstructions',
+      message: 'Describe the installation process:',
     },
     {
       type: 'input',
-      name: 'github',
-      message: 'Enter your GitHub Username',
+      name: 'usageInstructions',
+      message: 'How is the Project used?',
     },
     {
       type: 'input',
-      name: 'linkedin',
-      message: 'Enter your LinkedIn URL.',
+      name: 'contributionGuidlines',
+      message: 'What are the Contribution Guidlines?',
+    },
+    {
+      type: 'input',
+      name: 'testInstructions',
+      message: 'Describe the Test Instructions:',
+    },
+    {
+      type: 'input',
+      name: 'contributionGuidlines',
+      message: 'What are the Contribution Guidlines?',
+    },
+    {
+      type: 'list',
+      name: 'license',
+      message: 'Choose a liceense:',
+      choices: ["Apache 2.0", "BSD", "Other"]
+    },
+    {
+      type: 'input',
+      name: 'gitHubUserName',
+      message: 'What is your GitHub username?',
     },
   ]);
 };
 
+const generateHTML = ({ name, title, description, installInstructions, usageInstructions, contributionGuidlines, license, gitHubUserName }) =>
+  `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1>${title}</h1>
+    <p> Hello, my name is ${name} and this is my Project.</p>
+    <h2>Project Description:</h2>
+    <p>${description}</p>
+    <h2>Installation Instructions:</h2>
+    <p>${installInstructions}</p>
+    <h2>Usage Instructions:</h2>
+    <p>${usageInstructions}</p>
+    <h2>Contribution Guidlines</h2>
+    <p>${contributionGuidlines}</p>
+    <h3>License: ${license}</h3>
+    <h2>Questions:</h2>
+    <p>${gitHubUserName}</p>
+  </div>
+</div>
+</body>
+</html>`;
 
-// array of questions for user
-const questions = [
+// Bonus using writeFileSync as a promise
+const init = () => {
+  promptUser()
+    // Use writeFileSync method to use promises instead of a callback function
+    .then((answers) => fs.writeFileSync('index.html', generateHTML(answers)))
+    .then(() => console.log('Successfully wrote to index.html'))
+    .catch((err) => console.error(err));
+};
 
-];
-
-// function to write README file
-function writeToFile(fileName, data) {
-}
-
-// function to initialize program
-function init() {
-
-}
-
-// function call to initialize program
 init();
+
+// // array of questions for user
+// const questions = [
+
+// ];
+
+// // function to write README file
+// function writeToFile(fileName, data) {
+// }
+
+// // function to initialize program
+// function init() {
+
+// }
+
+// // function call to initialize program
+// init();
