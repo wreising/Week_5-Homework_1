@@ -69,12 +69,12 @@ const licenseDescription = "link to description"
 
 let licenseSeleted = {
   if(license == 'Apache 2.0') {
-    licenseSeleted = ['Apache 2.0'](href = http://apache.org)
-  } else if (license == 'BSD') {
-  licenseSelected = [BSD](href = http://bsd.org)
-  } else {
-  licenseSelected = [Other](href = http://other.org)
-  }
+    licenseSeleted = '['Apache 2.0'](href = http://apache.org)'
+} else if (license == 'BSD') {
+  licenseSelected = '[BSD](href = http://bsd.org)'
+} else {
+  licenseSelected = '[Other](href = http://other.org)'
+}
 }
 
 const generateMD = ({ name, title, description, installInstructions, usageInstructions, contributionGuidlines, license, gitHubUserName, email }) =>
@@ -120,7 +120,7 @@ ${email}`
 const init = () => {
   promptUser()
     // Use writeFileSync method to use promises instead of a callback function
-    .then((answers) => fs.writeFileSync('README-Filled.md', generateMD(answers)))
+    .then((answers) => fs.writeFileSync('README-${title}.md', generateMD(answers)))
     .then(() => console.log('Successfully wrote to README-Filled.md'))
     .catch((err) => console.error(err));
 };
