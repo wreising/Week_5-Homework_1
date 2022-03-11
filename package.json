@@ -1,0 +1,22 @@
+{
+  "name": "week_5-homework_1",
+  "version": "1.0.0",
+  "description": "Good README Generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wreising/Week_5-Homework_1.git"
+  },
+  "author": "William Reising",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wreising/Week_5-Homework_1/issues"
+  },
+  "homepage": "https://github.com/wreising/Week_5-Homework_1#readme",
+  "dependencies": {
+    "inquirer": "^8.2.1"
+  }
+}
