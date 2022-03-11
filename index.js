@@ -36,11 +36,11 @@ const promptUser = () => {
       name: 'contributionGuidlines',
       message: 'What are the Contribution Guidlines?',
     },
-    {
-      type: 'input',
-      name: 'testInstructions',
-      message: 'Describe the Test Instructions:',
-    },
+    // {
+    //   type: 'input',
+    //   name: 'testInstructions',
+    //   message: 'Describe the Test Instructions:',
+    // },
     {
       type: 'input',
       name: 'contributionGuidlines',
@@ -57,17 +57,41 @@ const promptUser = () => {
       name: 'gitHubUserName',
       message: 'What is your GitHub username?',
     },
+    {
+      type: 'input',
+      name: 'email',
+      message: 'What is your email address?',
+    },
   ]);
 };
 
-const generateMD = ({ name, title, description, installInstructions, usageInstructions, contributionGuidlines, license, gitHubUserName }) =>
+const licenseDescription = "link to description"
+
+let licenseSeleted = {
+  if(license == 'Apache 2.0') {
+    licenseSeleted = ['Apache 2.0'](href = http://apache.org)
+  } else if (license == 'BSD') {
+  licenseSelected = [BSD](href = http://bsd.org)
+  } else {
+  licenseSelected = [Other](href = http://other.org)
+  }
+}
+
+const generateMD = ({ name, title, description, installInstructions, usageInstructions, contributionGuidlines, license, gitHubUserName, email }) =>
   `# README
 # ${title}
 ### ${name}
+#### ${license}
 
 ## Description
 
 ${description}
+
+## Table of Contents
+### Instalation Instructions
+### Usage Instructions
+### Contribution Guidlines
+### Questions
 
 ## Installation Instructions
 
@@ -81,41 +105,18 @@ ${usageInstructions}
 
 ${contributionGuidlines}
 
-## License: href=${license}
+## License: ${licenseSelected}
 
-## Questions: https://github.com/${gitHubUserName}`
+${licenseDescription}
 
-// const generateHTML = ({ name, title, description, installInstructions, usageInstructions, contributionGuidlines, license, gitHubUserName }) =>
-//   `<!DOCTYPE html>
-// <html lang="en">
-// <head>
-//   <meta charset="UTF-8">
-//   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-//   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-//   <title>Document</title>
-// </head>
-// <body>
-//   <div class="jumbotron jumbotron-fluid">
-//   <div class="container">
-//     <h1>${title}</h1>
-//     <p> Hello, my name is ${name} and this is my Project.</p>
-//     <h2>Project Description:</h2>
-//     <p>${description}</p>
-//     <h2>Installation Instructions:</h2>
-//     <p>${installInstructions}</p>
-//     <h2>Usage Instructions:</h2>
-//     <p>${usageInstructions}</p>
-//     <h2>Contribution Guidlines</h2>
-//     <p>${contributionGuidlines}</p>
-//     <h3>License: ${license}</h3>
-//     <h2>Questions:</h2>
-//     <p>GitHub: https://github.com/${gitHubUserName}</p>
-//   </div>
-// </div>
-// </body>
-// </html>`;
+## Questions:
 
-// Bonus using writeFileSync as a promise
+https://github.com/${gitHubUserName}
+
+${email}`
+
+
+
 const init = () => {
   promptUser()
     // Use writeFileSync method to use promises instead of a callback function
