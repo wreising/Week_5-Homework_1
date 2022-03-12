@@ -28,19 +28,14 @@ const promptUser = () => {
     },
     {
       type: 'input',
-      name: 'usageInstructions',
-      message: 'How is the Project used?',
+      name: 'usageCommand',
+      message: 'What is the command to use the App?',
     },
     {
       type: 'input',
-      name: 'contributionGuidlines',
-      message: 'What are the Contribution Guidlines?',
+      name: 'instructions',
+      message: 'Instructions for use:',
     },
-    // {
-    //   type: 'input',
-    //   name: 'testInstructions',
-    //   message: 'Describe the Test Instructions:',
-    // },
     {
       type: 'input',
       name: 'contributionGuidlines',
@@ -49,7 +44,7 @@ const promptUser = () => {
     {
       type: 'list',
       name: 'license',
-      message: 'Choose a liceense:',
+      message: 'Choose a license:',
       choices: ["Apache 2.0", "BSD", "Other"]
     },
     {
@@ -65,62 +60,66 @@ const promptUser = () => {
   ]);
 };
 
-const licenseDescription = "link to description"
-
-let licenseSeleted = {
-  if(license == 'Apache 2.0') {
-    licenseSeleted = '['Apache 2.0'](href = http://apache.org)'
-} else if (license == 'BSD') {
-  licenseSelected = '[BSD](href = http://bsd.org)'
-} else {
-  licenseSelected = '[Other](href = http://other.org)'
-}
+function licenseD(license) {
+  if (license == 'Apache 2.0') {
+    licenseDescription = '[Apache 2.0](href = http://apache.org)'
+  } else if (license == 'BSD') {
+    licenseDescription = '[BSD](href = http://bsd.org)'
+  } else {
+    licenseDescription = '[Other](href = http://other.org)'
+  }
 }
 
-const generateMD = ({ name, title, description, installInstructions, usageInstructions, contributionGuidlines, license, gitHubUserName, email }) =>
-  `# README
-# ${title}
-### ${name}
-#### ${license}
+const generateMD = ({ name, title, description, installInstructions, usageCommand, instructions, contributionGuidlines, license, licenseDescription, gitHubUserName, email }) =>
+  `# README - ${title}
 
-## Description
+### [${name}](#questions)
+
+#### [${license}](#license) License
+
+## App Description
 
 ${description}
 
 ## Table of Contents
-### Instalation Instructions
-### Usage Instructions
-### Contribution Guidlines
-### Questions
+- [Instalation Instructions](#install)
+- [Command to Use](#command)
+- [Instructions](#instructions)
+- [Contribution Guidlines](#contribution)
+- [License](#license)
+- [Questions](#questions)
 
-## Installation Instructions
+## Installation Instructions {#install}
 
 ${installInstructions}
 
-## Usage Instructions
+## Command to use: {#command}
 
-${usageInstructions}
+<code>${usageCommand}</code>
 
-## Contribution Guidlines
+## Instructions: {#instructions}
+
+${instructions}
+
+## Contribution Guidlines {#contribution}
 
 ${contributionGuidlines}
 
-## License: ${licenseSelected}
+## License: ${license} {#license}
 
 ${licenseDescription}
 
-## Questions:
+## Questions: {#questions}
 
-https://github.com/${gitHubUserName}
+Find me on **[GitHub](https://github.com/${gitHubUserName})**
 
-${email}`
-
+**[email](${email})** me`
 
 
 const init = () => {
   promptUser()
     // Use writeFileSync method to use promises instead of a callback function
-    .then((answers) => fs.writeFileSync('README-${title}.md', generateMD(answers)))
+    .then((answers) => fs.writeFileSync('README-Filled.md', generateMD(answers)))
     .then(() => console.log('Successfully wrote to README-Filled.md'))
     .catch((err) => console.error(err));
 };
