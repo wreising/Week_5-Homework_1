@@ -1,14 +1,6 @@
 // function to generate markdown for README
 
-
-// let a = data.license // why can't I access data.license?
-
-// if (a == 'Apache 2.0') {
-//   licenseDescription = 'Apache description'
-// } else {
-//   licenseDescription = 'three'
-// }
-
+// generate license badge from shields.io
 function licenseBadege(license) {
   if (license === 'Apache 2.0') {
     return `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`;
@@ -22,6 +14,7 @@ function licenseBadege(license) {
   return '';
 }
 
+// generate license descriptions
 function licenseDescription(license) {
   if (license === 'Apache 2.0') {
     return `Under this license, users can: Use the code commercially: Companies can include the licensed code in proprietary software that they then sell to customers.`
@@ -35,6 +28,7 @@ function licenseDescription(license) {
   return ''
 }
 
+// generate md file
 function generateMD(data) {
   return `# README - ${data.title} ${licenseBadege(data.license)}
 
@@ -77,7 +71,7 @@ ${data.contributionGuidlines}
 
 ## Tests {#tests}
 
-${tests}
+${data.tests}
 
 ## License: ${data.license} {#license}
 
@@ -87,9 +81,10 @@ ${licenseDescription(data.license)}
 
 ## Questions: {#questions}
 
-Find the source for this and more of my projects on **[GitHub](https://github.com/${data.gitHubUserName})**
+Find the source for this project and more on **[GitHub](https://github.com/${data.gitHubUserName}).**
 
 **[email](${data.email})** me with any further questions.`
 }
 
+// export module
 module.exports = generateMD;

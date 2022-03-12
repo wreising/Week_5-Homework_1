@@ -1,12 +1,12 @@
-# README - ewr [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+# README - README Generator [![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
-### By: [awer](#questions)
+### By: [Bill Reising](#questions)
 
 ---
 
 ## App Description
 
-awer
+A command line utility to generate a README file for a new project.
 
 ---
 
@@ -15,6 +15,7 @@ awer
 - [Command to Use](#command)
 - [Instructions](#instructions)
 - [Contribution Guidlines](#contribution)
+- [Tests](#tests)
 - [License](#license)
 - [Questions](#questions)
 
@@ -22,28 +23,32 @@ awer
 
 ## Installation Instructions {#install}
 
-awera
+copy the directory and files to a server with Node, fs, and inquirer installed.
 
 ## Command to use: {#command}
 
-<code>wera</code>
+<code>node readme.js</code>
 
 ## Instructions: {#instructions}
 
-wer
+Run 'node readme.js' and answer the questions.
 
 ## Contribution Guidlines {#contribution}
 
-awer
+Be polite and clear. Provide examples and liks as appropriate.
 
-## License: Apache 2.0 {#license}
+## Tests {#tests}
 
-Under this license, users can: Use the code commercially: Companies can include the licensed code in proprietary software that they then sell to customers.
+none
+
+## License: BSD 3 {#license}
+
+The BSD 3-clause license allows you almost unlimited freedom with the software so long as you include the BSD copyright and license notice in it (found in Fulltext). You may not use the names of the original company or its members to endorse derived products.
 
 ---
 
 ## Questions: {#questions}
 
-Find me on **[GitHub](https://github.com/aer)**
+Find the source for this project and more on **[GitHub](https://github.com/wreising).**
 
-**[email](aer)** me
+**[email](wreising@mac.com)** me with any further questions.
