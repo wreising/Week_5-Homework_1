@@ -1,12 +1,14 @@
-# README - asdf
+# README - ewr [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-### [asdf](#questions)
+### By: [awer](#questions)
 
-#### [BSD](#license) License
+---
 
 ## App Description
 
-asdf
+awer
+
+---
 
 ## Table of Contents
 - [Instalation Instructions](#install)
@@ -16,28 +18,32 @@ asdf
 - [License](#license)
 - [Questions](#questions)
 
+---
+
 ## Installation Instructions {#install}
 
-asdf
+awera
 
 ## Command to use: {#command}
 
-<code>asdf</code>
+<code>wera</code>
 
 ## Instructions: {#instructions}
 
-asdf
+wer
 
 ## Contribution Guidlines {#contribution}
 
-asdf
+awer
 
-## License: BSD {#license}
+## License: Apache 2.0 {#license}
 
-three
+Under this license, users can: Use the code commercially: Companies can include the licensed code in proprietary software that they then sell to customers.
+
+---
 
 ## Questions: {#questions}
 
-Find me on **[GitHub](https://github.com/asdf)**
+Find me on **[GitHub](https://github.com/aer)**
 
-**[email](asdf)** me
+**[email](aer)** me

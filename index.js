@@ -42,10 +42,15 @@ const questions = [
     message: 'What are the Contribution Guidlines?',
   },
   {
+    type: 'input',
+    name: 'tests',
+    message: 'What are the tests?',
+  },
+  {
     type: 'list',
     name: 'license',
     message: 'Choose a license:',
-    choices: ["Apache 2.0", "BSD", "Other"]
+    choices: ["Apache 2.0", "BSD 3", "Creative Commons", "GNU GPL"]
   },
   {
     type: 'input',
