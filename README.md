@@ -27,7 +27,7 @@ A command line utility to generate a README file for a new project.
 
 ---
 
-## Installation Instructions {#install}
+## Installation Instructions
 
 copy the directory and files to a server with Node, fs, and inquirer installed.
 
