@@ -18,8 +18,8 @@ A command line utility to generate a README file for a new project.
 
 ## Table of Contents
 - [Instalation Instructions](#installation-instructions)
-- [Command to Use](#command-to-use:)
-- [Instructions](#instructions:)
+- [Command to Use](#command-to-use)
+- [Instructions](#instructions)
 - [Contribution Guidlines](#contribution-guidlines)
 - [Tests](#tests)
 - [License](#license-bsd-3)
