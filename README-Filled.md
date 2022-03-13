@@ -6,7 +6,7 @@
 
 ## App Description
 
-A command line utility to generate a README file for a new project.
+A command line utility to create a README file for a new project. It collects input from the user about the project and creates the README file from that input.
 
 ---
 
@@ -21,33 +21,33 @@ A command line utility to generate a README file for a new project.
 
 ---
 
-## Installation Instructions {#install}
+## Installation Instructions
 
-copy the directory and files to a server with Node, fs, and inquirer installed.
+Copy the folder and it's contents to a server running Node with Inquirer and fs installed.
 
-## Command to use: {#command}
+## Command to use:
 
 <code>node readme.js</code>
 
-## Instructions: {#instructions}
+## Instructions:
 
-Run 'node readme.js' and answer the questions.
+run `node readme.js` and asnwer the promts.
 
-## Contribution Guidlines {#contribution}
+## Contribution Guidlines
 
-Be polite and clear. Provide examples and liks as appropriate.
+Be polite and provide examples.
 
-## Tests {#tests}
+## Tests
 
-none
+There are no tests for this project.
 
-## License: BSD 3 {#license}
+## License: BSD 3
 
-The BSD 3-clause license allows you almost unlimited freedom with the software so long as you include the BSD copyright and license notice in it (found in Fulltext). You may not use the names of the original company or its members to endorse derived products.
+>The BSD 3-clause license allows you almost unlimited freedom with the software so long as you include the BSD copyright and license notice in it (found in Fulltext). You may not use the names of the original company or its members to endorse derived products.
 
 ---
 
-## Questions: {#questions}
+## Questions:
 
 Find the source for this project and more on **[GitHub](https://github.com/wreising).**
 
