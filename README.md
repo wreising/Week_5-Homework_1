@@ -17,7 +17,7 @@ A command line utility to generate a README file for a new project.
 ---
 
 ## Table of Contents
-- [Instalation Instructions](#install)
+- [Instalation Instructions](#installation-instructions)
 - [Command to Use](#command)
 - [Instructions](#instructions)
 - [Contribution Guidlines](#contribution)
