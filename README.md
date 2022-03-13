@@ -18,11 +18,11 @@ A command line utility to generate a README file for a new project.
 
 ## Table of Contents
 - [Instalation Instructions](#installation-instructions)
-- [Command to Use](#command)
-- [Instructions](#instructions)
-- [Contribution Guidlines](#contribution)
+- [Command to Use](#command-to-use:)
+- [Instructions](#instructions:)
+- [Contribution Guidlines](#contribution-guidlines)
 - [Tests](#tests)
-- [License](#license)
+- [License](#license-bsd-3)
 - [Questions](#questions)
 
 ---
@@ -31,29 +31,29 @@ A command line utility to generate a README file for a new project.
 
 copy the directory and files to a server with Node, fs, and inquirer installed.
 
-## Command to use: {#command}
+## Command to use:
 
 <code>node readme.js</code>
 
-## Instructions: {#instructions}
+## Instructions:
 
 Run 'node readme.js' and answer the questions.
 
-## Contribution Guidlines {#contribution}
+## Contribution Guidlines
 
 Be polite and clear. Provide examples and liks as appropriate.
 
-## Tests {#tests}
+## Tests
 
 none
 
-## License: BSD 3 {#license}
+## License: BSD 3
 
 >The BSD 3-clause license allows you almost unlimited freedom with the software so long as you include the BSD copyright and license notice in it (found in Fulltext). You may not use the names of the original company or its members to endorse derived products.
 
 ---
 
-## Questions: {#questions}
+## Questions:
 
 Find the source for this project and more on **[GitHub](https://github.com/wreising).**
 
