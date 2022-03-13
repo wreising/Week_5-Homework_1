@@ -53,33 +53,33 @@ ${data.description}
 
 ---
 
-## Installation Instructions {#install}
+## Installation Instructions
 
 ${data.installInstructions}
 
-## Command to use: {#command}
+## Command to use:
 
 <code>${data.usageCommand}</code>
 
-## Instructions: {#instructions}
+## Instructions:
 
 ${data.instructions}
 
-## Contribution Guidlines {#contribution}
+## Contribution Guidlines
 
 ${data.contributionGuidlines}
 
-## Tests {#tests}
+## Tests
 
 ${data.tests}
 
-## License: ${data.license} {#license}
+## License: ${data.license}
 
 >${licenseDescription(data.license)}
 
 ---
 
-## Questions: {#questions}
+## Questions:
 
 Find the source for this project and more on **[GitHub](https://github.com/${data.gitHubUserName}).**
 
