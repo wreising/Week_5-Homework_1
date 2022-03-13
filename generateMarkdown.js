@@ -75,7 +75,7 @@ ${data.tests}
 
 ## License: ${data.license} {#license}
 
-${licenseDescription(data.license)}
+>${licenseDescription(data.license)}
 
 ---
 
