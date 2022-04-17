@@ -1,12 +1,12 @@
-# README - Tech Blog [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+# README - Social Network API [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-### By: [Bill Reising](#questions)
+### By: [William Reising](#questions)
 
 ---
 
 ## App Description
 
-A CMS Tech Blog
+An API that can be used to allow users to register for the site, create posts, and other activities.
 
 ---
 
@@ -23,19 +23,19 @@ A CMS Tech Blog
 
 ## Installation Instructions
 
-Goto https://week-7-homework-2-techblog.herokuapp.com and use the website.
+Download the files and run npm i.
 
 ## Command to use:
 
-<code>https://week-7-homework-2-techblog.herokuapp.com</code>
+<code>nodemon</code>
 
 ## Instructions:
 
-https://week-7-homework-2-techblog.herokuapp.com
+Run `nodemon` to start the server. Then use Insomnia to GET, POST, PUT, and DELETE entires into the MongoDB socialDB.
 
 ## Contribution Guidlines
 
-Read and enjoy.
+Be polite and provide examples.
 
 ## Tests
 
@@ -51,7 +51,7 @@ NA
 
 Find the source for this project and more on **[GitHub](https://github.com/wreising).**
 
-**[email](william@reising.dev)** me with any further questions.
+**[email](wreising@mac.com)** me with any further questions.
 
 ---
 
